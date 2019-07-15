@@ -97,10 +97,11 @@
                         </li>
                         @endforeach
                         </ul>
+                    
                         </div>
                         <div class="container">
                     <h3>Add New Comments</h3>
-                        
+                        @if(!Auth::guest())
                         {!! Form::open(['action'=>['CommentController@store'],'method'=>'POST']) !!}
                         <input type='hidden' name='post_id' value='{{ $post->id }}'>
                         
@@ -136,6 +137,9 @@
                             </div>
                         </div>
                         {!! Form::close() !!}
+                        @else
+                        <h4 class="alert alert-info"><i class="fa fa-info-circle"></i> Please login to comment on this posts</h4>
+                        @endif
                         </div>
                 </div><!--/.col-md-8-->
             

@@ -37,6 +37,7 @@
     
     
     @include("inc.navbar")
+    @include("inc.searchbox")
     
     @include("inc.messages")
     @yield('content')

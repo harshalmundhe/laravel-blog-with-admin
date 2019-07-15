@@ -5,7 +5,6 @@
 @endsection
 
 @section("content")
-    
 <div class="container m-5 pb-5">
   <div class="row">
     <div class="col-md-4"></div>
@@ -29,10 +28,14 @@
         <a href="#" class="btn btn-info"><i class="fab fa-twitter fa-2x"></i></a>
         <a href="#" class="btn btn-info"><i class="fab fa-linkedin fa-2x"></i></a> 
     </p>
-        <p>
-            <a href="#" class="btn btn-success">Follow</a>
-            <a href="#" class="btn btn-success float-right"><img src="{{ asset('images/user-plus.png') }}"> Add Friend</a>
-        </p>
+        @if(!Auth::guest())
+            @if(Auth::user()->id != $profile->id)
+                <p>
+                    <a href="#" class="btn btn-success">Follow</a>
+                    <a href="#" class="btn btn-success float-right"><img src="{{ asset('images/user-plus.png') }}"> Add Friend</a>
+                </p>
+            @endif
+        @endif
     </div>
     
   </div>

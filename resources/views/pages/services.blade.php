@@ -27,7 +27,7 @@
 
                 <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="feature-wrap">
-                        <i class="fa fa-cloud-download"></i>
+                        <i class="fas fa-cloud-download-alt"></i>
                         <h2>Easy to customize</h2>
                         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
                     </div>
